@@ -1,3 +1,2 @@
-add_subdirectory(log)
-add_subdirectory(network)
-
+include_directories(hdr)
+add_subdirectory(src)

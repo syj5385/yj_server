@@ -1,9 +1,14 @@
-set (SRC main.cpp)
+include_directories(${CMAKE_SOURCE_DIR}/lib/hdr)
+include_directories(${CMAKE_SOURCE_DIR}/lib/hdr/network)
+include_directories(${CMAKE_SOURCE_DIR}/lib/hdr/log)
 
+link_directories(${CMAKE_SOURCE_DIR}/lib/log)
+link_directories(${CMAKE_SOURCE_DIR}/lib/network)
 
-add_executable(${PROJECT_NAME} ${SRC})
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/hdr ${CMAKE_SOURCE_DIR}/hdr/network ${CMAKE_SOURCE_DIR}/hdr/log)
-target_link_libraries(${PROJECT_NAME} PUBLIC network log)
+add_executable(yj_server main.cpp)
+
+target_link_libraries(yj_server network log)
+
 
 
 
