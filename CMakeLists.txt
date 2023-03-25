@@ -31,6 +31,6 @@ add_compile_options("-Wall")
 add_compile_options("-Wno-psabi")
 
 add_subdirectory(lib)
-add_subdirectory(src)
+# add_subdirectory(src)
 # add_subdirectory(tests)
 
